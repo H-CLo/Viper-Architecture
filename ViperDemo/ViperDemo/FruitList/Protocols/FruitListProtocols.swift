@@ -12,6 +12,7 @@ import UIKit
 protocol FruitListViewProtocol: class {
     // PRESENTER -> VIEW
     func showFruits(with fruits: [Fruit])
+    func showIndicator(isShow: Bool)
 }
 
 protocol FruitListPresenterProtocol: class {
@@ -20,7 +21,7 @@ protocol FruitListPresenterProtocol: class {
     var view: FruitListViewProtocol? {get set}
     var wireframe: FruitListWireFrameProtocol? {get set}
 
-    func viewDidLoad()
+    func fetchData()
     func showFruitSelection(with fruit: Fruit, from view: UIViewController)
 }
 

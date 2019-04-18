@@ -13,15 +13,9 @@ class FruitListInteractor: FruitListInputInteractorProtocol {
     weak var presenter: FruitListOutputInteractorProtocol?
     
     func getFruitList() {
-        presenter?.fruitListDidFetch(fruitList: getAllFruitDetail())
-    }
-    
-    func getAllFruitDetail() -> [Fruit] {
-        var fruitList = [Fruit]()
-        let allFruitDetail = Common.generateDataList()
-        for item in allFruitDetail {
-            fruitList.append(Fruit(attributes: item))
-        }
-        return fruitList
+        // Api Service
+        ApiService.shared().fetchForTwoSec(nextTask: {[weak self] (fruits: [Fruit]) in
+            self?.presenter?.fruitListDidFetch(fruitList: fruits)
+        })
     }
 }

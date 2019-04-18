@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3327B76022687622000DF1A2 /* ApiService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3327B75F22687622000DF1A2 /* ApiService.swift */; };
 		A91C90981FB2E3E8007096F8 /* FruitDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C90971FB2E3E8007096F8 /* FruitDetailView.swift */; };
 		A91C909A1FB2E402007096F8 /* FruitDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C90991FB2E402007096F8 /* FruitDetailPresenter.swift */; };
 		A91C909C1FB2E419007096F8 /* FruitDetailProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = A91C909B1FB2E419007096F8 /* FruitDetailProtocols.swift */; };
@@ -26,6 +27,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3327B75F22687622000DF1A2 /* ApiService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiService.swift; sourceTree = "<group>"; };
 		A91C90971FB2E3E8007096F8 /* FruitDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailView.swift; sourceTree = "<group>"; };
 		A91C90991FB2E402007096F8 /* FruitDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailPresenter.swift; sourceTree = "<group>"; };
 		A91C909B1FB2E419007096F8 /* FruitDetailProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitDetailProtocols.swift; sourceTree = "<group>"; };
@@ -57,6 +59,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3327B75E2268760B000DF1A2 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				3327B75F22687622000DF1A2 /* ApiService.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
 		A91C90921FB2E328007096F8 /* FruitDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -119,6 +129,7 @@
 		A9FE42331FB2AB6800E7CF18 /* ViperDemo */ = {
 			isa = PBXGroup;
 			children = (
+				3327B75E2268760B000DF1A2 /* Api */,
 				A9FE42491FB2AB8A00E7CF18 /* FruitList */,
 				A91C90921FB2E328007096F8 /* FruitDetail */,
 				A9FE42341FB2AB6800E7CF18 /* AppDelegate.swift */,
@@ -285,6 +296,7 @@
 				A9FE42371FB2AB6800E7CF18 /* FruitListView.swift in Sources */,
 				A9FE425F1FB2B0F300E7CF18 /* FruitListInteractor.swift in Sources */,
 				A9FE423D1FB2AB6800E7CF18 /* ViperDemo.xcdatamodeld in Sources */,
+				3327B76022687622000DF1A2 /* ApiService.swift in Sources */,
 				A9FE42351FB2AB6800E7CF18 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -423,7 +435,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ACPWS8QS6;
+				DEVELOPMENT_TEAM = HV7YQRBGLU;
 				INFOPLIST_FILE = ViperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demansolTech.ViperDemo;
@@ -438,7 +450,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 7ACPWS8QS6;
+				DEVELOPMENT_TEAM = HV7YQRBGLU;
 				INFOPLIST_FILE = ViperDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.demansolTech.ViperDemo;

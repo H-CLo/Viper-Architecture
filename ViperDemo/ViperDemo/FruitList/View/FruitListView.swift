@@ -8,9 +8,10 @@
 
 import UIKit
 
-class FruitListView: UIViewController,FruitListViewProtocol {
+class FruitListView: UIViewController, FruitListViewProtocol {
     
     @IBOutlet var fruitTblView: UITableView!
+    @IBOutlet weak var indicator: UIActivityIndicatorView!
     
     var presenter:FruitListPresenterProtocol?
     var fruitList = [Fruit]()
@@ -18,19 +19,26 @@ class FruitListView: UIViewController,FruitListViewProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         FruitListWireframe.createFruitListModule(fruitListRef: self)
-        presenter?.viewDidLoad()
+        presenter?.fetchData()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    func showIndicator(isShow: Bool) {
+        indicator.isHidden = !isShow
+    }
 
     func showFruits(with fruits: [Fruit]) {
         fruitList = fruits
         fruitTblView.reloadData()
     }
-
+    
+    @IBAction func refreshButtonDidPushed(_ sender: UIBarButtonItem) {
+        presenter?.fetchData()
+    }
 }
 
 extension FruitListView: UITableViewDataSource, UITableViewDelegate {

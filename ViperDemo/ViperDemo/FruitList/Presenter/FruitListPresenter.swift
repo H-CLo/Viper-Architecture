@@ -19,11 +19,12 @@ class FruitListPresenter: FruitListPresenterProtocol {
         wireframe?.pushToFruitDetail(with: fruit, from: view)
     }
     
-    func viewDidLoad() {
-        self.loadFruitList()
+    func fetchData() {
+        loadFruitList()
     }
 
     func loadFruitList() {
+        view?.showIndicator(isShow: true)
         interactor?.getFruitList()
     }
     
@@ -32,7 +33,7 @@ class FruitListPresenter: FruitListPresenterProtocol {
 extension FruitListPresenter: FruitListOutputInteractorProtocol {
     
     func fruitListDidFetch(fruitList: [Fruit]) {
+        view?.showIndicator(isShow: false)
         view?.showFruits(with: fruitList)
     }
-    
 }
